@@ -1,0 +1,926 @@
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Righteous&display=swap");
+
+* {
+    font-family: "Hammersmith One", sans-serif;
+}
+
+.user_nav {
+    overflow-x: hidden;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.sidemenu .card {
+    border-color: #469be9;
+}
+
+.sidemenu .card-header {
+    color: white;
+    background-color: #469be9;
+    font-size: 24px;
+}
+
+.sticky-button {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 9999;
+    padding: 10px;
+    background-color: #469be9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-button button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.sticky-button button:hover {
+    background-color: #3473ac;
+}
+
+button .toggle-text {
+    display: none;
+}
+
+.sticky-button button a {
+    text-decoration: none;
+    color: white;
+}
+
+.sticky-button i {
+    margin-right: 5px;
+}
+
+.toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-button i {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-button span {
+    display: flex;
+    align-items: center;
+}
+
+/* tentang content */
+.tentang_content .cover-jurnal {
+    width: 100%;
+}
+
+.tentang_content .tentang_judul h1 {
+    font-family: "Righteous", cursive;
+    font-size: 64px;
+    color: #469be9;
+}
+
+.tentang_content .tentang_text p {
+    font-size: 20px;
+    color: #469be9;
+}
+
+.tentang_button .btn_blue {
+    border-radius: 25px;
+    border-style: none;
+    padding: 10px 20px 10px 20px;
+    font-style: normal;
+    background-color: #469be9;
+}
+
+.btn_blue a {
+    text-decoration: none;
+    color: white;
+}
+
+/* terkini content */
+.terkini_content .terkini_judul h1 {
+    font-family: "Righteous", cursive;
+    font-size: 64px;
+    color: #469be9;
+}
+
+.terkini_content .terkini_volume {
+    padding: 20px 10px 20px 10px;
+    background-color: #469be9;
+    width: 300px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.terkini_text p {
+    color: #469be9;
+}
+
+.terkini_list .card-title {
+    color: #469be9;
+    font-size: 32px;
+}
+
+.terkini_list .card-text {
+    color: #469be9;
+    font-size: 25px;
+}
+
+.terkini_list .card-text a {
+    color: #469be9;
+    text-decoration: none;
+}
+
+.terkini_list .card-subtitle {
+    color: #3473ac;
+}
+
+.terkini_list .card-link {
+    text-decoration: none;
+    color: #469be9;
+}
+
+.terkini_list .card-button {
+    padding: 15px 10px 15px 10px;
+    border-style: none;
+    background-color: #469be9;
+}
+
+.card-button a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* arsip */
+.arsip_content h1 {
+    font-family: "Righteous", cursive;
+    color: #469be9;
+    font-size: 64px;
+}
+
+.arsip_content .arsip_tgl {
+    padding: 10px 10px 20px 10px;
+    background-color: #469be9;
+    width: 130px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.arsip_content .card {
+    border-color: #469be9;
+}
+
+.arsip_content .cover-jurnal {
+    width: 100%;
+}
+
+.arsip_content .card-subtitle {
+    color: #469be9;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.arsip_content p {
+    color: #3473ac;
+}
+
+/*arsip volume */
+.volume_content .volume_judul h1 {
+    font-family: "Righteous", cursive;
+    font-size: 64px;
+    color: #469be9;
+}
+
+.volume_text p {
+    color: #469be9;
+}
+
+.volume_list .card-title {
+    color: #469be9;
+    font-size: 32px;
+}
+
+.volume_list .card-text {
+    color: #469be9;
+    font-size: 25px;
+}
+
+.volume_list .card-text a {
+    color: #469be9;
+    text-decoration: none;
+}
+
+.volume_list .card-subtitle {
+    color: #3473ac;
+}
+
+.volume_list .card-link {
+    text-decoration: none;
+    color: #469be9;
+}
+
+.volume_list .card-button {
+    padding: 15px 10px 15px 10px;
+    border-style: none;
+    background-color: #469be9;
+}
+
+.card-button a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/*arsip detail */
+.detail_content .detail_judul h1 {
+    font-family: "Righteous", cursive;
+    color: #469be9;
+}
+
+.detail_content .pdf_button {
+    padding: 15px 10px 15px 10px;
+    border-style: none;
+    background-color: #469be9;
+}
+
+.pdf_button a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.detail_card .card {
+    border-color: #469be9;
+}
+
+.detail_card .card-header {
+    background-color: #469be9;
+    color: white;
+}
+
+.detail_card .card-title {
+    color: #469be9;
+}
+
+.detail_card .card-body p {
+    color: #3473ac;
+}
+
+.detail_card .card-body .pdf_link {
+    color: #3473ac;
+    text-decoration: none;
+}
+
+.detail_card .card-body a {
+    color: #469be9;
+    text-decoration: none;
+}
+
+/* tim editorial */
+.editorial_content .editorial_judul h1 {
+    color: #469be9;
+    font-family: "Righteous", cursive;
+    font-size: 50px;
+}
+
+.editorial_content .ketua_redaksi h6 {
+    color: #469be9;
+}
+
+.editorial_content .ketua_redaksi h3 {
+    color: #3473ac;
+}
+
+.editorial_content .editor h6 {
+    color: #469be9;
+}
+
+.editorial_content .editor h3 {
+    color: #469be9;
+}
+
+.editorial_content .reviewer h6 {
+    color: #469be9;
+}
+
+.editorial_content .reviewer h3 {
+    color: #469be9;
+}
+
+.editorial_button .btn_blue {
+    border-radius: 25px;
+    border-style: none;
+    padding: 10px 20px 10px 20px;
+    font-style: normal;
+    background-color: #469be9;
+}
+
+.btn_blue a {
+    text-decoration: none;
+    color: white;
+}
+
+/* fokus jangkauan */
+.fokus_content .fokus_judul h1 {
+    color: #469be9;
+    font-family: "Righteous", cursive;
+}
+
+.fokus_content .fokus_list h4 {
+    color: #469be9;
+}
+
+.fokus_content .fokus_list p {
+    color: #3473ac;
+}
+
+/* indeks */
+.index_content .index_judul h1 {
+    color: #469be9;
+    font-family: "Righteous", cursive;
+}
+
+/* pedoman author */
+.pedoman_content .pedoman_judul h1 {
+    color: #469be9;
+    font-family: "Righteous", cursive;
+}
+
+.pedoman_content .pedoman_list h4 {
+    color: #469be9;
+}
+
+.pedoman_content .pedoman_list p {
+    color: #3473ac;
+}
+
+/* proses tinjauan */
+.proses_content .proses_judul h1 {
+    color: #469be9;
+    font-family: "Righteous", cursive;
+}
+
+.proses_content .proses_text {
+    color: #469be9;
+}
+
+/* etika publikasi */
+.etika_content .etika_judul h1 {
+    color: #469be9;
+    font-family: "Righteous", cursive;
+}
+
+.etika_content .etika_text p {
+    color: #3473ac;
+}
+
+.etika_content .etika_text h4 {
+    color: #469be9;
+}
+
+/* lisensi */
+.lisensi_content .lisensi_judul h1 {
+    color: #469be9;
+    font-family: "Righteous", cursive;
+}
+
+.lisensi_content .lisensi_text {
+    color: #469be9;
+}
+
+/* kontak */
+.kontak_content .kontak_judul h1 {
+    color: #469be9;
+    font-family: "Righteous", cursive;
+    font-size: 50px;
+}
+
+.kontak_info .card-text {
+    color: #469be9;
+}
+
+/* navbar */
+.user_nav .bg-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.logo_container {
+    background-image: url("../img/jati_logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100px; /* Adjust the height as needed */
+    width: 100px; /* Adjust the width as needed */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px; /* Adjust the spacing as needed */
+}
+
+.nav-link {
+    font-size: 20px;
+    color: white;
+}
+
+.nav-link:hover {
+    color: #94d1ff;
+}
+
+.btn_login {
+    border-radius: 25px;
+    border-style: none;
+    padding: 10px 20px 10px 20px;
+    font-style: normal;
+}
+
+.btn_login a {
+    text-decoration: none;
+    color: #469be9;
+}
+
+.cover-img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome h1 {
+    font-family: "Righteous", cursive;
+    font-size: 75px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.welcome_text p {
+    font-size: 20px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+/*footer*/
+footer {
+    background-color: #469be9;
+}
+
+footer section h6 {
+    color: #94d1ff;
+}
+
+footer section a {
+    text-decoration: none;
+    color: white;
+}
+
+footer section p {
+    color: white;
+}
+
+/* auth */
+
+.auth_bg {
+    background-image: url("../img/login-bg.png");
+    height: 100vh; /* Set the height to 100 viewport height to cover the entire viewport */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.auth_bg .card-title {
+    font-family: "Righteous", cursive;
+    color: #469be9;
+}
+
+.auth_bg .card-text {
+    color: #3473ac;
+}
+
+.auth_bg .form-label {
+    color: #469be9;
+}
+
+.auth_bg .form-control {
+    color: #469be9;
+}
+
+.auth_bg .form-control::placeholder {
+    color: #469be9; /* Change the color to your desired color */
+}
+
+.auth_bg p {
+    color: #469be9;
+}
+
+.auth_bg .card-link {
+    text-decoration: none;
+    color: #3473ac;
+}
+
+.auth_bg .btn_blue {
+    border-radius: 25px;
+    border-style: none;
+    padding: 10px 20px 10px 20px;
+    font-style: normal;
+    background-color: #469be9;
+    color: white;
+}
+
+@media (max-width: 1199.98px) {
+    .user_nav .bg-img {
+        position: absolute;
+        width: 100%;
+        height: 65%;
+        z-index: -1;
+        object-fit: cover;
+    }
+    .cover-img {
+        width: 100%;
+        height: auto; /* Increase the z-index to ensure the image is displayed above the navbar */
+    }
+    .welcome h1 {
+        font-family: "Righteous", cursive;
+        font-size: 55px;
+        color: white;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+
+    .welcome_text p {
+        font-size: 20px;
+        color: white;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .user_nav .bg-img {
+        position: absolute;
+        width: 100%;
+        height: 55%;
+        z-index: -1;
+        object-fit: cover;
+    }
+    .cover-img {
+        width: 100%;
+        height: auto; /* Increase the z-index to ensure the image is displayed above the navbar */
+    }
+    .welcome h1 {
+        font-family: "Righteous", cursive;
+        font-size: 50px;
+        color: white;
+        margin-left: 70px;
+        margin-top: 10px;
+    }
+
+    .welcome_text p {
+        font-size: 15px;
+        color: white;
+        margin-left: 70px;
+        margin-top: 10px;
+    }
+
+    /* arsip */
+    .arsip_content h1 {
+        font-family: "Righteous", cursive;
+        color: #469be9;
+        font-size: 64px;
+    }
+
+    .arsip_content .arsip_tgl {
+        padding: 10px 10px 20px 10px;
+        background-color: #469be9;
+        width: 130px;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .arsip_content .card {
+        border-color: #469be9;
+    }
+
+    .arsip_content .cover-jurnal {
+        width: 50%;
+    }
+
+    .arsip_content .card-subtitle {
+        color: #469be9;
+        font-size: 30px;
+        text-decoration: none;
+    }
+
+    .arsip_content p {
+        color: #3473ac;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .user_nav .bg-img {
+        position: absolute;
+        width: 100%;
+        height: 45%;
+        z-index: -1;
+        object-fit: cover;
+    }
+    .cover-img {
+        width: 100%;
+        height: auto; /* Increase the z-index to ensure the image is displayed above the navbar */
+    }
+    .welcome h1 {
+        font-family: "Righteous", cursive;
+        font-size: 40px;
+        color: white;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    .welcome_text p {
+        font-size: 10px;
+        color: white;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    /* tentang content */
+    .tentang_content .cover-jurnal {
+        width: 100%;
+    }
+
+    .tentang_content .tentang_judul h1 {
+        font-family: "Righteous", cursive;
+        font-size: 64px;
+        color: #469be9;
+    }
+
+    .tentang_content .tentang_text p {
+        font-size: 20px;
+        color: #469be9;
+    }
+
+    .tentang_button .btn_blue {
+        border-radius: 25px;
+        border-style: none;
+        padding: 10px 20px 10px 20px;
+        font-style: normal;
+        background-color: #469be9;
+    }
+
+    .btn_blue a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* terkini content */
+    .terkini_content .terkini_judul h1 {
+        font-family: "Righteous", cursive;
+        font-size: 64px;
+        color: #469be9;
+    }
+
+    .terkini_content .terkini_volume {
+        padding: 20px 10px 20px 10px;
+        background-color: #469be9;
+        width: 300px;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .terkini_text p {
+        color: #469be9;
+    }
+
+    .terkini_list .card-title {
+        color: #469be9;
+        font-size: 32px;
+    }
+
+    .terkini_list .card-text {
+        color: #469be9;
+        font-size: 25px;
+    }
+
+    .terkini_list .card-subtitle {
+        color: #3473ac;
+    }
+
+    .terkini_list .card-link {
+        text-decoration: none;
+        color: #469be9;
+    }
+
+    .terkini_list .card-button {
+        padding: 15px 10px 15px 10px;
+        border-style: none;
+        background-color: #469be9;
+    }
+
+    .card-button a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+
+    /* arsip */
+    .arsip_content h1 {
+        font-family: "Righteous", cursive;
+        color: #469be9;
+        font-size: 64px;
+    }
+
+    .arsip_content .arsip_tgl {
+        padding: 10px 10px 20px 10px;
+        background-color: #469be9;
+        width: 130px;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .arsip_content .card {
+        border-color: #469be9;
+    }
+
+    .arsip_content .cover-jurnal {
+        width: 50%;
+    }
+
+    .arsip_content .card-subtitle {
+        color: #469be9;
+        font-size: 30px;
+        text-decoration: none;
+    }
+
+    .arsip_content p {
+        color: #3473ac;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .user_nav .bg-img {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .cover-img {
+        display: none;
+    }
+
+    .welcome h1 {
+        font-family: "Righteous", cursive;
+        font-size: 40px;
+        color: white;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+
+    .welcome_text p {
+        font-size: 10px;
+        color: white;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+
+    /* tentang content */
+    .tentang_content .cover-jurnal {
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    .tentang_content .tentang_judul h1 {
+        font-family: "Righteous", cursive;
+        font-size: 30px;
+        color: #469be9;
+    }
+
+    .tentang_content .tentang_text p {
+        font-size: 10px;
+        color: #469be9;
+    }
+
+    .tentang_button .btn_blue {
+        border-radius: 25px;
+        border-style: none;
+        padding: 10px 20px 10px 20px;
+        font-style: normal;
+        background-color: #469be9;
+    }
+
+    .btn_blue a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+
+    /* terkini content */
+    .terkini_content .terkini_judul h1 {
+        font-family: "Righteous", cursive;
+        font-size: 30px;
+        color: #469be9;
+    }
+
+    .terkini_content .terkini_volume {
+        padding: 20px 10px 20px 10px;
+        background-color: #469be9;
+        width: 200px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .terkini_text p {
+        color: #469be9;
+        font-size: 10px;
+    }
+
+    .terkini_list .card-title {
+        color: #469be9;
+        font-size: 20px;
+    }
+
+    .terkini_list .card-text {
+        color: #469be9;
+        font-size: 15px;
+    }
+
+    .terkini_list .card-subtitle {
+        color: #3473ac;
+        font-size: 10px;
+    }
+
+    .terkini_list .card-link {
+        text-decoration: none;
+        color: #469be9;
+        font-size: 10px;
+    }
+
+    .terkini_list .card-button {
+        padding: 10px;
+        border-style: none;
+        background-color: #469be9;
+    }
+
+    .card-button a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+
+    /* arsip */
+    .arsip_content h1 {
+        font-family: "Righteous", cursive;
+        color: #469be9;
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    .arsip_content .arsip_tgl {
+        padding: 10px;
+        background-color: #469be9;
+        width: 100px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .arsip_content .card {
+        border-color: #469be9;
+    }
+
+    .arsip_content .cover-jurnal {
+        width: 50%;
+    }
+
+    .arsip_content .card-subtitle {
+        color: #469be9;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .arsip_content p {
+        color: #3473ac;
+        font-size: 10px;
+    }
+}
