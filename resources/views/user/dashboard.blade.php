@@ -1,87 +1,198 @@
 @extends('layout.user.user_layout')
 
 @section('content')
-<div class="col-lg-8">
-    <div class="tentang_content">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <img src="{{ asset('img') }}/cover_jurnal.png" class="cover-jurnal img-fluid"
-                    alt="banner">
-            </div>
-            <div class="col-lg-8 col-md-6 col-sm-6">
-                <div class="tentang_judul">
-                    <h1>Tentang JATI</h1>
-                </div>
-                <div class="tentang_text">
-                    <p>Jurnal A Teknik Informatika (JATI) adalah jurnal nasional yang diterbitkan oleh
-                        Program Studi
-                        Teknik Informatika (PSTI), Politeknik Caltex Riau (PCR), Pekanbaru sejak tahun 2023
-                    </p>
-                </div>
-                <div class="tentang_button">
-                    <button class="btn_blue"><a href="/tentang_kami">Selengkapnya</a></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="terkini_content">
-        <div class="terkini_judul">
-            <h1>Terkini</h1>
-        </div>
-        <div class="terkini_volume">
-            Vol 7, No 2 (2023)
-        </div>
-        <br>
-        <div class="terkini_text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet fermentum urna. Duis
-                nec eros ex.
-                Praesent a euismod justo. Nullam dignissim, lectus sed iaculis placerat, quam odio sagittis
-                leo,
-                tempor porta lorem lectus sed lectus. Etiam semper, neque at mattis ultricies, dolor mi
-                congue risus,
-                non vehicula libero risus ac erat. Integer nec arcu augue.</p>
-        </div>
-        <div class="terkini_list">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Daftar Isi</h5>
-                    <div class="row">
-                        <div class="col-lg-10">
-                            <p class="card-text"><i class="fa-solid fa-book fa-xl"
-                                    style="color: #469be9;"></i>&nbsp;&nbsp;
-                                <a href="/arsip_detail">Pengembangan Game gacha menggunakan Unity</a>
-                            </p>
-                            <h6 class="card-subtitle mb-2">Muhammad Ilham, Kaveh</h6>
-                            <a href="http://dx.doi.org/10.25126/jati.90112345" class="card-link">DOI:
-                                http://dx.doi.org/10.25126/jati.90112345</a>
-                        </div>
-                        <div class="col-lg-2">
-                            <button class="card-button"><a href="/.pdf"><i
-                                        class="fa-solid fa-file-pdf"></i>&nbsp;&nbsp;PDF</a></button>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-10">
-                            <p class="card-text"><i class="fa-solid fa-book fa-xl"
-                                style="color: #469be9;"></i>&nbsp;&nbsp;
-                            <a href="/arsip_detail">Pengembangan Game gacha menggunakan Unity</a>
-                        </p>
-                            <h6 class="card-subtitle mb-2">Muhammad Ilham, Kaveh</h6>
-                            <a href="http://dx.doi.org/10.25126/jati.90112345" class="card-link">DOI:
-                                http://dx.doi.org/10.25126/jati.90112345</a>
-                        </div>
-                        <div class="col-lg-2">
-                            <button class="card-button"><a href="/.pdf"><i
-                                        class="fa-solid fa-file-pdf"></i>&nbsp;&nbsp;PDF</a></button>
-                        </div>
-                    </div>
+<div class="container-fluid p-0">
 
+    <h1 class="h3 mb-3"><strong>JATI</strong> Beranda</h1>
+
+    <div class="row">
+        <div class="col-xl-6 col-xxl-5 d-flex">
+            <div class="w-100">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mt-0">
+                                        <h5 class="card-title">Total Jurnal</h5>
+                                    </div>
+
+                                    <div class="col-auto">
+                                        <div class="stat text-primary">
+                                            <i class="align-middle" data-feather="truck"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="mt-1 mb-3">2.382</h1>
+                                <div class="mb-0">
+                                    <span class="text-danger"> <i
+                                            class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
+                                    <span class="text-muted">Since last week</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mt-0">
+                                        <h5 class="card-title">Jurnal Pending</h5>
+                                    </div>
+
+                                    <div class="col-auto">
+                                        <div class="stat text-primary">
+                                            <i class="align-middle" data-feather="users"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="mt-1 mb-3">14.212</h1>
+                                <div class="mb-0">
+                                    <span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
+                                    <span class="text-muted">Since last week</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mt-0">
+                                        <h5 class="card-title">Submisi</h5>
+                                    </div>
+
+                                    <div class="col-auto">
+                                        <div class="stat text-primary">
+                                            <i class="align-middle" data-feather="dollar-sign"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="mt-1 mb-3">$21.300</h1>
+                                <div class="mb-0">
+                                    <span class="text-success"> <i
+                                            class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
+                                    <span class="text-muted">Since last week</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col mt-0">
+                                        <h5 class="card-title">Jurnal Aktif</h5>
+                                    </div>
+
+                                    <div class="col-auto">
+                                        <div class="stat text-primary">
+                                            <i class="align-middle" data-feather="users"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="mt-1 mb-3">14.212</h1>
+                                <div class="mb-0">
+                                    <span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
+                                    <span class="text-muted">Since last week</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br>
+        </div>
+
+        <div class="col-xl-6 col-xxl-7">
+            <div class="card flex-fill w-100">
+                <div class="card-header">
+
+                    <h5 class="card-title mb-0">Jurnal yang disubmit</h5>
+                </div>
+                <div class="card-body py-3">
+                    <div class="chart chart-sm">
+                        <canvas id="chartjs-dashboard-line"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-12 col-xxl-12 d-flex">
+            <div class="card flex-fill">
+                <div class="card-header">
+
+                    <h5 class="card-title mb-0">Latest Projects</h5>
+                </div>
+                <table class="table table-hover my-0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th class="d-none d-xl-table-cell">Start Date</th>
+                            <th class="d-none d-xl-table-cell">End Date</th>
+                            <th>Status</th>
+                            <th class="d-none d-md-table-cell">Assignee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Project Apollo</td>
+                            <td class="d-none d-xl-table-cell">01/01/2023</td>
+                            <td class="d-none d-xl-table-cell">31/06/2023</td>
+                            <td><span class="badge bg-success">Done</span></td>
+                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
+                        </tr>
+                        <tr>
+                            <td>Project Fireball</td>
+                            <td class="d-none d-xl-table-cell">01/01/2023</td>
+                            <td class="d-none d-xl-table-cell">31/06/2023</td>
+                            <td><span class="badge bg-danger">Cancelled</span></td>
+                            <td class="d-none d-md-table-cell">William Harris</td>
+                        </tr>
+                        <tr>
+                            <td>Project Hades</td>
+                            <td class="d-none d-xl-table-cell">01/01/2023</td>
+                            <td class="d-none d-xl-table-cell">31/06/2023</td>
+                            <td><span class="badge bg-success">Done</span></td>
+                            <td class="d-none d-md-table-cell">Sharon Lessman</td>
+                        </tr>
+                        <tr>
+                            <td>Project Nitro</td>
+                            <td class="d-none d-xl-table-cell">01/01/2023</td>
+                            <td class="d-none d-xl-table-cell">31/06/2023</td>
+                            <td><span class="badge bg-warning">In progress</span></td>
+                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
+                        </tr>
+                        <tr>
+                            <td>Project Phoenix</td>
+                            <td class="d-none d-xl-table-cell">01/01/2023</td>
+                            <td class="d-none d-xl-table-cell">31/06/2023</td>
+                            <td><span class="badge bg-success">Done</span></td>
+                            <td class="d-none d-md-table-cell">William Harris</td>
+                        </tr>
+                        <tr>
+                            <td>Project X</td>
+                            <td class="d-none d-xl-table-cell">01/01/2023</td>
+                            <td class="d-none d-xl-table-cell">31/06/2023</td>
+                            <td><span class="badge bg-success">Done</span></td>
+                            <td class="d-none d-md-table-cell">Sharon Lessman</td>
+                        </tr>
+                        <tr>
+                            <td>Project Romeo</td>
+                            <td class="d-none d-xl-table-cell">01/01/2023</td>
+                            <td class="d-none d-xl-table-cell">31/06/2023</td>
+                            <td><span class="badge bg-success">Done</span></td>
+                            <td class="d-none d-md-table-cell">Christina Mason</td>
+                        </tr>
+                        <tr>
+                            <td>Project Wombat</td>
+                            <td class="d-none d-xl-table-cell">01/01/2023</td>
+                            <td class="d-none d-xl-table-cell">31/06/2023</td>
+                            <td><span class="badge bg-warning">In progress</span></td>
+                            <td class="d-none d-md-table-cell">William Harris</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 </div>
 @endsection

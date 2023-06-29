@@ -476,6 +476,11 @@ button .toggle-text {
     margin-top: 20px;
 }
 
+.user_logged {
+    color: white;
+    margin-right: 20px;
+}
+
 /*footer*/
 footer {
     background-color: #469be9;
