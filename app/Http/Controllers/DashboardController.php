@@ -50,7 +50,9 @@ class DashboardController extends Controller
 
         $jurnal = DB::table('jurnal')
             ->join('status', 'status.id', '=', 'jurnal.status_id')
-            ->select('status.jenis_status as status', 'jurnal.id as id', 'judul', 'kata_kunci', 'tanggal_submit')
+            ->join('users','users.id','=','jurnal.user_id')
+            ->select('status.jenis_status as status', 'jurnal.id as id', 'judul', 'kata_kunci', 'tanggal_submit'
+            ,'users.username as user')
             ->get();
 
         $monthlyData = DB::table('jurnal')

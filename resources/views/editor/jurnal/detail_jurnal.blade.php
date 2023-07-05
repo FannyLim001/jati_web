@@ -44,7 +44,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">File Jurnal (PDF)</label>
+                            <label for="formFile" class="form-label">File Jurnal (PDF, DOC, DOCX)</label>
                             <input class="form-control" name="file_pdf" type="file" id="formFile">
                             <label for="formFile" id="fileNameLabel">File sebelumnya: {{ $jurnal->file_pdf }}</label>
                             @error('file_pdf')
@@ -71,7 +71,7 @@
                             <div class="form-group">
                                 <label for="contributors">Referensi</label>
                                 @foreach ($reference as $reference)
-                                    <textarea class="form-control" id="references" name="references[]" rows="3">{{ $reference->referensi }}</textarea>
+                                    <textarea class="form-control" id="references" name="references[]" rows="3">{{ $reference->referensi }}</textarea><br>
                                 @endforeach
                                 <small class="text-muted">Enter reference text and press Enter to add more.</small>
                                 @error('references.*')

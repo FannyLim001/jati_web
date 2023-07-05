@@ -24,8 +24,9 @@
                             <label for="exampleInputEmail1" class="form-label">{{ $jurnal->abstrak }}</label>
                         </div>
                         <div class="mb-3">
-                            <h2>Jurnal (PDF)</h2>
-                            <embed src="{{ asset('storage/pdf/' . $jurnal->file_pdf) }}" type="application/pdf" width="100%" height="600px">                            
+                            <h2>Jurnal (PDF, DOC, DOCX)</h2>
+                            <embed src="{{ asset('storage/pdf/' . $jurnal->file_pdf) }}" type="application/pdf"
+                                width="100%" height="600px">
                         </div>
                         <div class="mb-3">
                             <!-- Contributor Section -->
@@ -42,7 +43,7 @@
                             <div class="form-group">
                                 <h2>Referensi</h2>
                                 @foreach ($reference as $r)
-                                <label for="exampleInputEmail1" class="form-label">{{ $r->referensi }}</label><br>
+                                    <label for="exampleInputEmail1" class="form-label">{{ $r->referensi }}</label><br>
                                 @endforeach
                             </div>
                             <div id="references-container"></div>
@@ -51,11 +52,17 @@
                             <div class="form-group row">
                                 <label class="control-label text-right col-md-3">Status</label>
                                 <div class="col-md-15">
-                                    @if ($jurnal->status == 'Pending')
+                                    @if ($jurnal->status == 'Direview')
                                         <td><span class="badge bg-secondary">{{ $jurnal->status }}</span></td>
-                                    @elseif($jurnal->status == 'Disetujui')
+                                    @elseif($jurnal->status == 'Submisi diterima')
                                         <td><span class="badge bg-success">{{ $jurnal->status }}</span></td>
-                                    @elseif($jurnal->status == 'Ditolak')
+                                    @elseif($jurnal->status == 'Diperlukan revisi')
+                                        <td><span class="badge bg-warning">{{ $jurnal->status }}</span></td>
+                                    @elseif($jurnal->status == 'Submit ulang untuk review')
+                                        <td><span class="badge bg-info">{{ $jurnal->status }}</span></td>
+                                    @elseif($jurnal->status == 'Submit ulang ditempat lain')
+                                        <td><span class="badge bg-info">{{ $jurnal->status }}</span></td>
+                                    @elseif($jurnal->status == 'Submisi ditolak')
                                         <td><span class="badge bg-danger">{{ $jurnal->status }}</span></td>
                                     @endif
                                 </div>
@@ -66,22 +73,35 @@
                             <div class="form-group">
                                 <h2>Review</h2>
                                 @if ($jurnal_review->isEmpty())
-                                <label for="exampleInputEmail1" class="form-label">Belum ada review</label>
+                                    <label for="exampleInputEmail1" class="form-label">Belum ada review</label>
+                                    <div class="mb-3">
+                                        <div class="form-group">
+                                            <label for="review">Review Saya</label>
+                                            <textarea class="form-control" id="references" name="review_text" rows="3"></textarea>
+                                            @error('review')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
                                 @else
-                                @foreach ($jurnal_review as $r)
-                                <label for="exampleInputEmail1" class="form-label">{{ $r->review_text }}</label><br>
-                                @endforeach
+                                    @foreach ($jurnal_review as $r)
+                                        <label for="exampleInputEmail1"
+                                            class="form-label">{{ $r->review_text }}</label><br>
+                                    @endforeach
                                 @endif
                             </div>
                             <div id="references-container"></div>
                         </div>
                         <div class="mb-3">
-                            <div class="form-group">
-                                <label for="review">Review Saya</label>
-                                <textarea class="form-control" id="references" name="review_text" rows="3"></textarea>
-                                @error('review')
-                                    <div class="text-danger">{{ $message }}</div>
-                                @enderror
+                            <div class="form-group row">
+                                <label class="control-label text-right col-md-3">Rekomendasi</label>
+                                <div class="col-md-15">
+                                    <select class="form-control custom-select" name="status_jurnal" id="bank_tujuan">
+                                        @foreach ($status as $s)
+                                            <option value="{{ $s->id }}">{{ $s->jenis_status }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>

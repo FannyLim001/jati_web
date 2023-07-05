@@ -20,7 +20,7 @@ class JurnalReview extends Model
         // Create a new journal instance
         $journal_review = self::create([
             'jurnal_id' => $id,
-            'review_text' => $data['review_text'],
+            'review_text' => $data,
             'user_id'=>$user_id
         ]);
 

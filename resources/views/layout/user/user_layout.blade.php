@@ -37,7 +37,7 @@
                         Jurnal
                     </li>
                     @if (Auth::user()->role == 'Penulis')
-                        <li class="sidebar-item {{ Request::path() === 'user_jurnal' || Request::path() === 'tambah_jurnal' || Request::route()->getName() === 'detailjurnal' ? 'active' : '' }}">
+                        <li class="sidebar-item {{ Request::path() === 'user_jurnal' || Request::path() === 'tambah_jurnal' || Request::route()->getName() === 'detailjurnal' || Request::route()->getName() === 'usereditjurnal' ? 'active' : '' }}">
                         <a class="sidebar-link" href="/user_jurnal">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Jurnal Saya</span>
                         </a>

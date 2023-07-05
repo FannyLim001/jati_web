@@ -87,6 +87,10 @@ Route::middleware(['auth', 'user'])->group(function () {
 
     Route::get('/detail_jurnal/{id}', [JurnalController::class, 'detailJurnal'])->name('detailjurnal');
 
+    Route::get('/revisi_jurnal/{id}', [JurnalController::class, 'ubahJurnal'])->name('usereditjurnal');
+
+    Route::post('/revisi_jurnal', [JurnalController::class, 'revisiJurnal'])->name('usereditjurnal.post');
+
     Route::get('/editor_jurnal', [JurnalController::class, 'editorIndex'])->name('editorjurnal');
 
     Route::get('/editor_detailjurnal/{id}', [JurnalController::class, 'editorDetailJurnal'])->name('editordetailjurnal');

@@ -1,5 +1,5 @@
 @php
-    $names = $list_kontributor->pluck('nama')->implode(', ');
+    $names = collect($list_kontributor)->pluck('nama')->implode(', ');
 @endphp
 
 @extends('layout.guest.guest_layout')

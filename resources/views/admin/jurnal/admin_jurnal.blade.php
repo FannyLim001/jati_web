@@ -29,6 +29,7 @@
                 <table id="tableJurnal" class="table table-hover my-0">
                     <thead>
                         <tr>
+                            <th>Author</th>
                             <th>Waktu Pengajuan</th>
                             <th>Judul</th>
                             <th>Kata Kunci</th>
@@ -39,14 +40,31 @@
                       <tbody>
                         @foreach ($jurnal as $j)
                         <tr>
+                            <td>{{ $j->user }}</td>
                             <td>{{ $j->tanggal_submit }}</td>
                             <td>{{ $j->judul }}</td>
                             <td>{{ $j->kata_kunci }}</td>
-                            @if ($j->status == 'Pending')
+                            @if ($j->status == 'Submission')
                                 <td><span class="badge bg-secondary">{{ $j->status }}</span></td>
-                            @elseif($j->status == 'Disetujui')
+                            @elseif($j->status == 'Direview')
+                            <td><span class="badge bg-warning">{{ $j->status }}</span></td>
+                            @elseif($j->status == 'Diterima')
+                            <td><span class="badge bg-info">{{ $j->status }}</span></td>
+                            @elseif($j->status == 'Copy Editing')
+                            <td><span class="badge bg-info">{{ $j->status }}</span></td>
+                            @elseif($j->status == 'Dipublish')
                             <td><span class="badge bg-success">{{ $j->status }}</span></td>
                             @elseif($j->status == 'Ditolak')
+                            <td><span class="badge bg-danger">{{ $j->status }}</span></td>
+                            @elseif($j->status == 'Submisi diterima')
+                            <td><span class="badge bg-success">{{ $j->status }}</span></td>
+                            @elseif($j->status == 'Diperlukan revisi')
+                            <td><span class="badge bg-warning">{{ $j->status }}</span></td>
+                            @elseif($j->status == 'Submit ulang untuk review')
+                            <td><span class="badge bg-info">{{ $j->status }}</span></td>
+                            @elseif($j->status == 'Submit ulang ditempat lain')
+                            <td><span class="badge bg-info">{{ $j->status }}</span></td>
+                            @elseif($j->status == 'Submisi ditolak')
                             <td><span class="badge bg-danger">{{ $j->status }}</span></td>
                             @endif
                             <td>

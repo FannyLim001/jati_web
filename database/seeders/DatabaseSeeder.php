@@ -17,6 +17,10 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(AdminSeeder::class);
         $this->call(StatusSeeder::class);
+        $this->call(EditorSeeder::class);
+        $this->call(ReviewerSeeder::class);
+        $this->call(VolumeJurnalSeeder::class);
+        $this->call(UserProfileSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

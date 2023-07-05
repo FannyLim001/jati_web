@@ -10,7 +10,7 @@ class Jurnal extends Model
 {
     protected $table = 'jurnal';
 
-    protected $fillable = ['judul', 'kata_kunci', 'abstrak', 'file_pdf', 'status_id', 'tanggal_submit','volume_id','user_id'];
+    protected $fillable = ['judul', 'kata_kunci', 'abstrak', 'file_pdf', 'status_id', 'tanggal_submit', 'volume_id', 'user_id'];
 
     public function kontributors()
     {
@@ -39,8 +39,8 @@ class Jurnal extends Model
             'file_pdf' => $fileName,
             'status_id' => 1,
             'tanggal_submit' => now(),
-            'volume_id'=> $data['volume_id'],
-            'user_id'=>$id
+            'volume_id' => $data['volume_id'],
+            'user_id' => $id
         ]);
 
         // Store the contributors
@@ -70,54 +70,66 @@ class Jurnal extends Model
     }
 
     public static function updateJournal($data, $id)
-{
+    {
 
-    // Find the journal instance
-    $journal = self::find($id);
+        // Find the journal instance
+        $journal = self::find($id);
 
-    if (!$journal) {
-        // Journal not found, handle the error condition
-        // For example, return an error message or redirect back with an error
-        return null;
+        if (!$journal) {
+            // Journal not found, handle the error condition
+            // For example, return an error message or redirect back with an error
+            return null;
+        }
+
+        // Update the journal information
+        $journal->judul = $data['judul'];
+        $journal->kata_kunci = $data['kata_kunci'];
+        $journal->abstrak = $data['abstrak'];
+        $journal->volume_id = $data['volume_id'];
+
+        // Handle the file upload if a new file is provided
+        if (isset($data['file_pdf'])) {
+            $file = $data['file_pdf'];
+            $fileName = $file->getClientOriginalName();
+            $file->storeAs('public/pdf', $fileName);
+            $journal->file_pdf = $fileName;
+        }
+
+        // Save the updated journal
+        $journal->save();
+
+        // Update the contributors
+        $contributors = $data['contributors'];
+
+        // Delete existing contributors
+        Kontributor::where('jurnal_id', $journal->id)
+            ->where('peran_kontributor', 'Penulis')
+            ->delete();
+
+        // Create new contributors
+        foreach ($contributors as $contributorName) {
+            Kontributor::create([
+                'nama' => $contributorName,
+                'peran_kontributor' => 'Penulis',
+                'jurnal_id' => $journal->id
+            ]);
+        }
+
+        // Update the references
+        $references = $data['references'];
+
+        // Delete existing contributors
+        Reference::where('jurnal_id', $journal->id)
+            ->delete();
+
+        // Create new contributors
+        foreach ($references as $referencesText) {
+            Reference::create([
+                'referensi' => $referencesText,
+                'jurnal_id' => $journal->id
+            ]);
+        }
+
+        return $journal;
     }
-
-    // Update the journal information
-    $journal->judul = $data['judul'];
-    $journal->kata_kunci = $data['kata_kunci'];
-    $journal->abstrak = $data['abstrak'];
-    $journal->volume_id = $data['volume_id'];
-
-    // Handle the file upload if a new file is provided
-    if (isset($data['file_pdf'])) {
-        $file = $data['file_pdf'];
-        $fileName = $file->getClientOriginalName();
-        $file->storeAs('public/pdf', $fileName);
-        $journal->file_pdf = $fileName;
-    }
-
-    // Save the updated journal
-    $journal->save();
-
-    // Update the contributors
-    $contributors = $data['contributors'];
-    foreach ($contributors as $contributorName) {
-        $contributor = Kontributor::firstOrCreate([
-            'nama' => $contributorName,
-            'peran_kontributor' => 'Penulis',
-            'jurnal_id' => $journal->id // Set the journal ID in the kontributor record
-        ]);
-    }
-
-    // Update the references
-    $references = $data['references'];
-    foreach ($references as $referencesText) {
-        $reference = Reference::firstOrCreate([
-            'referensi' => $referencesText,
-            'jurnal_id' => $journal->id // Set the journal ID in the reference record
-        ]);
-    }
-
-    return $journal;
-}
-
 }

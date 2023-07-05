@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::table('jurnal', function (Blueprint $table) {
             $table->unsignedBigInteger('volume_id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('reviewer_id')->nullable();
             $table->foreign('status_id')
               ->references('id')
               ->on('status')
@@ -26,7 +27,12 @@ return new class extends Migration
               ->on('jurnal_volume')
               ->onDelete('cascade');
 
-              $table->foreign('user_id')
+            $table->foreign('user_id')
+              ->references('id')
+              ->on('users')
+              ->onDelete('cascade');
+
+            $table->foreign('reviewer_id')
               ->references('id')
               ->on('users')
               ->onDelete('cascade');
