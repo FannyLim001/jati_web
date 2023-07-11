@@ -29,9 +29,7 @@ Route::get('/arsip_detail/{id}', [JurnalController::class, 'arsipDetailJurnal'])
 
 Route::get('/terkini', [JurnalController::class, 'arsipListTerkini'])->name('arsipterkini');
 
-Route::get('/tentang_kami', function () {
-    return view('guest.tentang_kami');
-});
+Route::get('/tentang_kami', [JurnalController::class, 'tentangKami'])->name('tentangkami');
 
 Route::get('/tim_editorial', [JurnalController::class, 'timEditorial'])->name('timeditorial');
 

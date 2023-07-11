@@ -43,24 +43,23 @@
             <br>
             <div class="editor">
                 <h3>Editor</h3>
-                <h6>Udin</h6>
-                <h6>Politeknik Caltex Riau, Indonesia</h6>
-                <h6>GoogleScholarID: cOX5SPsAAAAJ, ScopusID: 57330218200, SintaID: 6687913</h6>
-                <br>
-                <h6>Udin</h6>
-                <h6>Politeknik Caltex Riau, Indonesia</h6>
-                <h6>GoogleScholarID: cOX5SPsAAAAJ, ScopusID: 57330218200, SintaID: 6687913</h6>
+                @foreach ($editor as $e)
+                    <h6>{{ $e->nama }}</h6>
+                    <h6>{{ $e->afiliasi }}</h6>
+                    <h6>GoogleScholarID: {{ $e->gsch_id }}, ScopusID: {{ $e->scopus_id }}, SintaID: {{ $e->sinta_id }}
+                    </h6>
+                    <br>
+                @endforeach
             </div>
-            <br>
             <div class="reviewer">
                 <h3>Reviewer</h3>
-                <h6>Udin</h6>
-                <h6>Politeknik Caltex Riau, Indonesia</h6>
-                <h6>GoogleScholarID: cOX5SPsAAAAJ, ScopusID: 57330218200, SintaID: 6687913</h6>
-                <br>
-                <h6>Udin</h6>
-                <h6>Politeknik Caltex Riau, Indonesia</h6>
-                <h6>GoogleScholarID: cOX5SPsAAAAJ, ScopusID: 57330218200, SintaID: 6687913</h6>
+                @foreach ($reviewer as $e)
+                    <h6>{{ $e->nama }}</h6>
+                    <h6>{{ $e->afiliasi }}</h6>
+                    <h6>GoogleScholarID: {{ $e->gsch_id }}, ScopusID: {{ $e->scopus_id }}, SintaID: {{ $e->sinta_id }}
+                    </h6>
+                    <br>
+                @endforeach
             </div>
             <br>
             <div class="editorial_button">
@@ -100,7 +99,10 @@
                     </div>
                 </div>
                 <br>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.480837069637!2d101.4260969!3d0.5709752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab67086f2e89%3A0x65a24264fec306bb!2sPoliteknik%20Caltex%20Riau!5e0!3m2!1sen!2sid!4v1687836962872!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.480837069637!2d101.4260969!3d0.5709752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab67086f2e89%3A0x65a24264fec306bb!2sPoliteknik%20Caltex%20Riau!5e0!3m2!1sen!2sid!4v1687836962872!5m2!1sen!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <br>

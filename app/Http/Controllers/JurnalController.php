@@ -169,6 +169,28 @@ class JurnalController extends Controller
         ]);
     }
 
+    public function tentangKami()
+    {
+        $editor = DB::table('user_profile')
+            ->join('users', 'users.id', '=', 'user_profile.user_id')
+            ->select('nama', 'afiliasi', 'gsch_id', 'scopus_id', 'sinta_id')
+            ->where('users.role', 'Editor')
+            ->get();
+
+        $reviewer = DB::table('user_profile')
+            ->join('users', 'users.id', '=', 'user_profile.user_id')
+            ->select('nama', 'afiliasi', 'gsch_id', 'scopus_id', 'sinta_id')
+            ->where('users.role', 'Reviewer')
+            ->get();
+
+        $data = [
+            'editor' => $editor,
+            'reviewer' => $reviewer
+        ];
+
+        return view('guest.tentang_kami', $data);
+    }
+
     public function timEditorial()
     {
         $editor = DB::table('user_profile')
