@@ -16,6 +16,10 @@
                             <label for="exampleInputEmail1" class="form-label">{{ $profile->nama }}</label>
                         </div>
                         <div class="mb-3">
+                            <h2>Role</h2>
+                            <label for="exampleInputEmail1" class="form-label">{{ Auth::user()->role }}</label>
+                        </div>
+                        <div class="mb-3">
                             <h2>No Telp</h2>
                             <label for="exampleInputEmail1" class="form-label">{{ $profile->no_telp }}</label>
                         </div>

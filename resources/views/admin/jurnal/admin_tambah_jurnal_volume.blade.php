@@ -13,6 +13,7 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama Volume</label>
                             <input type="text" name="nama_vol" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <p>Format: Vol (No Volume), No (No Bagian Volume) (Tahun Volume Dibuat)</p>
                             @error('nama_vol')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror

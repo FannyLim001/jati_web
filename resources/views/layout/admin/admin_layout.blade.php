@@ -16,8 +16,10 @@
     <link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
     <title>JATI - Admin</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
 
     <link href="{{ asset('assets') }}/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/user_style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <!-- DataTables -->
@@ -113,6 +115,8 @@
                                     alt="Charles Hall" /> <span class="text-dark">{{ Auth::guard('admin')->user()->username }}</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item">Admin</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}">Log out</a>
                             </div>
                         </li>

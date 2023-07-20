@@ -4,8 +4,9 @@
 <div class="container-fluid p-0">
 
     @if (session()->has('success'))
-    <div class="alert alert-success" role="alert">
-        {{ session('success') }}
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Sukses!</strong> {{ session('success') }}
       </div>
         @endif
     <h1 class="h3 mb-3">Jurnal</h1>

@@ -16,6 +16,7 @@
     <link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
     <title>JATI - User</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
 
     <link href="{{ asset('assets') }}/css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -160,6 +161,9 @@
                                     alt="Charles Hall" /> <span class="text-dark">{{ Auth::user()->username }}</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item"><i class="align-middle me-1"
+                                    data-feather="user"></i> {{ Auth::user()->role }}</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/user_profile"><i class="align-middle me-1"
                                         data-feather="user"></i> Profile</a>
                                 <div class="dropdown-divider"></div>
